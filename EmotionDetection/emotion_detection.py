@@ -20,10 +20,7 @@ def emotion_detector(text_to_analyze):
     )
 
     emotion_dict = {result["label"]: result["score"] for result in results}
-    #list has dmoinant emotion at top so....
-    emotion_dict["dominant_emotion"] = list
-    (emotion_dict.keys())[0]
+    # list has dmoinant emotion at top so....
+    emotion_dict["dominant_emotion"] = list(emotion_dict.keys())[0]
     return emotion_dict
 
-
-print(emotion_detector("I love books"))
